@@ -1,6 +1,8 @@
 const { Client, Collection } = require('discord.js');
 const path = require('path');
 const glob = require('glob');
+require('dotenv').config();
+
 
 const config = require('./config.json');
 const client = new Client();
@@ -83,4 +85,4 @@ client
     }
   });
 
-client.login(config.token);
+client.login(process.env.TOKEN);
